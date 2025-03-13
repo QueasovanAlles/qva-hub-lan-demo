@@ -1,0 +1,17 @@
+<div class="server-unavailable-dialog">
+	<div class="header-content">
+		<h1>QvAHub LAN Server Unavailable</h1>
+		<img src="assets/QvAHub_Logo.png" alt="QvAHub Logo" class="logo">
+	</div>
+		<div class="server-info">
+			<p>The QvAHub LAN server {{getServerString()}} is not responding.</p>
+			<h3>Required Services:</h3>
+			<ol>
+				<li>QvAHub LAN server - NodeJS Websocket Server and Monitor app (port 52330)</li>
+				<li>QvAHub LAN Demo - This Angular app (port 52401)</li>
+				<li>QvAHub LAN Monitor - Angular app (port 52400)</li>
+			</ol>
+			<p>Please ensure QvATPC has started these services.</p>
+		</div>
+		<button class="test-btn" (click)="doPing()">Retry Connection</button>
+</div>

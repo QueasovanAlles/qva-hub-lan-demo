@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Core : exclude from project
+src/qvahub-lan-core/

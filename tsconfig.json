@@ -22,7 +22,11 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "qvahub-lan-core": ["src/qvahub-lan-core/src"],
+      "qvahub-lan-core/*": ["src/qvahub-lan-core/src/*"]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
