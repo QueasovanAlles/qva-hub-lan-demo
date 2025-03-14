@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 
-import { QvahubLocalhost, QvaLoggerService } from 'qvahub-lan-core';
+import { QvahubLanCoreModule, QvaLoggerService, QvahubLocalhostService } from 'qvahub-lan-core';
 import { ClientSimulatorService } from './client-simulator.service';
 import { AppLockDialogComponent } from './app-lock-dialog/app-lock-dialog.component';
 
@@ -12,11 +12,12 @@ import { AppLockDialogComponent } from './app-lock-dialog/app-lock-dialog.compon
     AppLockDialogComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    QvahubLanCoreModule
   ],
   providers: [
     ClientSimulatorService,
-    QvahubLocalhost,
+    QvahubLocalhostService,
     QvaLoggerService
   ],
   bootstrap: [AppComponent]

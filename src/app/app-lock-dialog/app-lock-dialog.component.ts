@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { QvahubLocalhost, QvaLoggerService } from 'qvahub-lan-core';
+import { QvahubLocalhostService, QvaLoggerService } from 'qvahub-lan-core';
 
 @Component({
   selector: 'app-app-lock-dialog',
@@ -10,7 +10,7 @@ export class AppLockDialogComponent {
 
 	@Output() serverAvailable = new EventEmitter<any>();
 
-    constructor(private localhost : QvahubLocalhost,
+    constructor(private localhost : QvahubLocalhostService,
 			    private log : QvaLoggerService) {}
 
     async doPing() {

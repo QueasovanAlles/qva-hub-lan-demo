@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef,AfterViewInit  } from '@angular/core';
 import { ClientSimulatorService, SimulationLog } from './client-simulator.service';
 import { 
-    QvahubLocalhost,
+    QvahubLocalhostService,
     QvaLoggerService,
     QvahubLanClient,
     QvahubLanHost,
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     isRunning = false;
 
     constructor(private simulator: ClientSimulatorService,
-				private localhost : QvahubLocalhost,
+				private localhost : QvahubLocalhostService,
 				private log : QvaLoggerService) {
 
 		this.log.setLogging(true);

@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 
 import { 
-    QvahubLocalhost,
+    QvahubLocalhostService,
     QvaLoggerService,
     QvahubLanClient,
     QvahubLanHost,
@@ -67,7 +67,7 @@ export class ClientSimulatorService {
 		}
 	];
 
-	constructor(private localhost : QvahubLocalhost,
+	constructor(private localhost : QvahubLocalhostService,
 				private log : QvaLoggerService) {}
 
 
