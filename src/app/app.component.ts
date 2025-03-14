@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild, ElementRef,AfterViewInit  } from '@angular/core';
 import { ClientSimulatorService, SimulationLog } from './client-simulator.service';
 import { 
-    QvahubLocalhostService,
+    QvaHubLocalhostService,
     QvaLoggerService,
-    QvahubLanClient,
-    QvahubLanHost,
-    QvahubLanPeer,
-    QvahubLanBroadcast,
+    QvaHubLanClient,
+    QvaHubLanHost,
+    QvaHubLanPeer,
+    QvaHubLanBroadcast,
     QvaHubLanClientType,
     QvaHubLanWebRTCType,
     QvaHubLanWebRTCClient,
@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
     isRunning = false;
 
     constructor(private simulator: ClientSimulatorService,
-				private localhost : QvahubLocalhostService,
+				private localhost : QvaHubLocalhostService,
 				private log : QvaLoggerService) {
 
 		this.log.setLogging(true);

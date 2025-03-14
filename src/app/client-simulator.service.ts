@@ -1,12 +1,12 @@
 import { Injectable, EventEmitter } from '@angular/core';
 
 import { 
-    QvahubLocalhostService,
+    QvaHubLocalhostService,
     QvaLoggerService,
-    QvahubLanClient,
-    QvahubLanHost,
-    QvahubLanPeer,
-    QvahubLanBroadcast,
+    QvaHubLanClient,
+    QvaHubLanHost,
+    QvaHubLanPeer,
+    QvaHubLanBroadcast,
     QvaHubLanClientType,
     QvaHubLanWebRTCType,
     QvaHubLanWebRTCClient,
@@ -67,7 +67,7 @@ export class ClientSimulatorService {
 		}
 	];
 
-	constructor(private localhost : QvahubLocalhostService,
+	constructor(private localhost : QvaHubLocalhostService,
 				private log : QvaLoggerService) {}
 
 
@@ -108,13 +108,13 @@ export class ClientSimulatorService {
 		let client;
 		switch (selectedProfile.webRTCType) {
 			case QvaHubLanWebRTCType.BROADCAST:
-				client = new QvahubLanBroadcast();
+				client = new QvaHubLanBroadcast();
 				break;
 			case QvaHubLanWebRTCType.HOST:
-				client = new QvahubLanHost(this.log);
+				client = new QvaHubLanHost(this.log);
 				break;
 			case QvaHubLanWebRTCType.PEER:
-				client = new QvahubLanPeer(this.log);
+				client = new QvaHubLanPeer(this.log);
 				break;
 		}
 
@@ -149,7 +149,7 @@ export class ClientSimulatorService {
 
     createTestPeer() {
 
-		const peer = new QvahubLanPeer(this.log);
+		const peer = new QvaHubLanPeer(this.log);
 		const clientId = `test_peer_${Date.now()}`;
 		this.qvaHubLanClients.set(clientId, peer);
 
@@ -190,7 +190,7 @@ export class ClientSimulatorService {
 
     createTestFIOPeer() {
 
-		const peer = new QvahubLanPeer(this.log);
+		const peer = new QvaHubLanPeer(this.log);
 		const clientId = `test_peer_${Date.now()}`;
 		this.qvaHubLanClients.set(clientId, peer);
 
@@ -231,7 +231,7 @@ export class ClientSimulatorService {
 
     createTestHost() {
 
-		const host = new QvahubLanHost(this.log);
+		const host = new QvaHubLanHost(this.log);
 		const clientId = `test_peer_${Date.now()}`;
 		this.qvaHubLanClients.set(clientId, host);
 
@@ -260,7 +260,7 @@ export class ClientSimulatorService {
 
     createTestFIOHost() {
 
-		const host = new QvahubLanHost(this.log);
+		const host = new QvaHubLanHost(this.log);
 		const clientId = `test_peer_${Date.now()}`;
 		this.qvaHubLanClients.set(clientId, host);
 
